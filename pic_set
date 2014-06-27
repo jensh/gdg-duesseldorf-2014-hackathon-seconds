@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# (c) 2011-04-14 Jens Hauke <jens@4k2.de>
+#
+
+set -x
+#opts="-transparent-color #ffffff"
+opts=""
+convert $opts -geometry 72x72 pic.png res/drawable-hdpi/icon.png
+convert $opts -geometry 48x48 pic.png res/drawable-mdpi/icon.png
+convert $opts -geometry 36x36 pic.png res/drawable-ldpi/icon.png
+
+function conv(){
+    file="$1"
+    convert $opts -geometry 72x72 $file res/drawable-hdpi/$file
+    convert $opts -geometry 48x48 $file res/drawable-mdpi/$file
+    convert $opts -geometry 36x36 $file res/drawable-ldpi/$file
+}
+conv play.png
+
+# Local Variables:
+#  compile-command: "./pic_set"
+# End:

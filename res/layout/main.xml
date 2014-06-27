@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/buttonRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextUser"
+        android:text="Send 7 Seconds" />
+
+    <EditText
+        android:id="@+id/editTextRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/buttonEnterRoom"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:lines="1" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextRoom"
+        android:layout_alignParentLeft="true"
+        android:text="Room #" />
+
+	<EditText
+        android:id="@+id/editTextUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextRoom"
+        android:layout_toLeftOf="@+id/buttonEnterRoom"
+        android:layout_toRightOf="@+id/textView2"
+        android:ems="10"
+		android:lines="1"
+		android:inputType="textPersonName">
+	</EditText>
+    
+	<TextView
+	    android:id="@+id/textView2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignBaseline="@+id/editTextUser"
+	    android:layout_alignParentLeft="true"
+	    android:text="User" />
+
+    <TextView
+        android:id="@+id/display"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonRecord"
+        />
+	<Button
+        android:id="@+id/buttonLeaveRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextRoom"
+        android:layout_alignParentRight="true"
+        android:text="Leave" />
+
+    <Button
+        android:id="@+id/buttonEnterRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextRoom"
+        android:layout_toLeftOf="@+id/buttonLeaveRoom"
+        android:text="Join" />
+    
+</RelativeLayout>
